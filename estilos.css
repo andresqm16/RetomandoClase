@@ -1,156 +1,194 @@
 a
 {
-	color: #00aeef;
+	color: #0095dd;
 }
 body
 {
 	background: #eee;
-	font-family: Arial ;
-	font-size: 16px;	
+	font-family: arial;
+	font-size: 16px;
 }
 footer
 {
-	background: #22bce0;
+	background: #FF0000;
 	color: rgba(255,255,255,0.7);
 	padding: 1em;
 	text-align: center;
 }
 footer p:first-child
 {
- margin-bottom: 0;
+	margin-bottom:0;
 }
 footer p:last-child
 {
-margin-top: 0;
+	margin-top:0;
 }
 footer p:last-child:after
 {
-	content: " -";
+	content: "- "
 }
 footer p:last-child:before
 {
-	content: "- ";
+	content: " -"
 }
 header
 {
-	background: #062f3c;
-	color: white;
-	overflow: hidden;
+	background: #00f;
+	color: #fff;
 	padding: 0.5em;
-	position: relative;
-	margin: 0 0 0 0;
+	position:relative;
+	overflow: hidden;
 }
 header figure
 {
 	float: left;
 }
-header h1
+header h2
 {
+	font-size:1.4em;
 	font-weight: normal;
-	font-size: 1.5em;
 	margin: 0 72px 0 0;
-
+}
+header #logo img
+{
+	border-right: 1px solid #fff;
+	margin-right:0.5em;
+	padding-right: 0.5em;
+	width:61px;
 }
 header #avatar 
 {
 	position: absolute;
-	right:0;
+	margin: 0.5em 1em 0 0.5em ;
 	top: 0;
-	padding: 0.5em 0.5em 0 0;
+	right:0;
+
 }
 header #avatar img
 {
 	border-radius: 50%;
-	width:80px;
-
-}
-header #logo
-{
-	border-right: 1px solid white;
-	padding-right: 0.5em;
-	margin-right: 0.5em;
-}
-header #logo img
-{
-	border-radius: 25%;
-	width:80px;
+	width:64px;
 }
 nav
 {
-	background: #00aeef;
+	background: #ff0;
 	position:relative;
 }
 nav ul
 {
+	margin:0;
+	padding:0.5em 0;
 	list-style: none;
-	margin: 0;
-	padding: 0;
 }
-nav ul li 
+nav ul li
 {
 	display: inline-block;
-	margin: 0 0.5em 0 0;
+	margin: 0 4em 0 4em;
 }
 nav ul li a
 {
-	color: white;
-	display: block; /* le agregas la propiedes para que tenga margenes y padding*/
 	text-decoration: none;
-	padding: 0.5em;
+	color: #f0f;
 }
-nav ul #user
+nav ul #publicar
 {
+
 	position: absolute;
-	top: -0.1em;
-	right:0;
+	top: 0.5em;
+	right:-1em;
+
 }
-nav ul #user a
+nav ul #publicar a
 {
-	background:#c1d82f;
-	border-radius: 5px;
-	box-shadow: rgba(0,0,0,0.5)5px 5px 20px;
+	border-radius: 15%;
+	background: #fff;
+	box-shadow: rgba(0,0,0,0.5)-5px 5px 20px;
 	font-style: italic;
 	padding: 0.6em 0.8em;
-	text-shadow:rgba(0,0,0,0.5)2px 2px 5px;/*esto es para texto*/
-
+	text-shadow:rgba(0,0,0,0.5) 2px 2px 5px;
 }
 #content
 {
-	margin:1em;
+	margin: 1em;
 }
 #content .item
 {
-	background: white;
-	border-bottom: 3px solid #c1d82f;
-	overflow: hidden;
+	background: #fff;
+	border-bottom: 4px solid #00ff00;
+	position: relative;
+	min-height: 150px;
+	margin-bottom: 3em;
 }
-#content .item figure
+#content .item  .autor
 {
-	float: left;
+	color: #aaa;
+	margin: 0 0 0.5em 0;
 }
-#content .item .autor_item
+#content .item  .autor a
 {
-	color:#aaa; 
-}
-#content .item .imagen_1
-{
-	margin-right:1em;
-}
-#content .item .imagen_1 img
-{
-	width: 164px;
-}
-#content .item .titulo_item
-{
-	font-style: italic;
-	font-size: 1.5em;	
-	margin-bottom: 0;
-	padding: 0 1em 0 0 ;
-}
-#content .item .titulo_item a
-{
-	color:#333333;
 	text-decoration: none;
 }
+#content .item  .datos
+{
+	margin: 0 0 0.5em 0;
+}
+#content .item  .datos .tag_item
+{
+	background: orange;
+	color: white;
+	border-radius: 10%;
+	display: inline-block;
+	margin: 0em 0.5em 0 0 ;
+	padding:0.5em 0.5em 0.3em 0.5em;
+	text-decoration: none;
 
+}
+#content .item  .datos .tag_fecha
+{
+	color: #888;
+	float: right;
+	margin-bottom: 0.5em;
+	margin-right:1em; 
+	margin-top:0.5em;
+}
+#content .item .image
+{
+	float: left;
+	padding-right: 0.5em;
+	margin-right: 0.5em;
+}
+#content .item .image img
+{
+	width: 150px;
+	height: 150px;
+}
+#content .item .title_item
+{
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: normal;
+	margin-bottom: 0;
+	padding: 1em 1em 0 0 ;
+}
+#content .item .title_item a
+{
+	color:#000;	
+	text-decoration: none;
+}
+#content .item .votacion
+{
+	background: #fff;
+	border-radius: 0 0 0.5em 0.5em;
+	left:3%;
+	padding: 0.5em;
+	position: absolute;
+	margin-top: 4px;
+	right:3%;
+	top:100%;
+}
+#content .item .votacion .guardar,
+#content .item .votacion .comentarios
+{
+	float:right;
+}
 
