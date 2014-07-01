@@ -1,0 +1,93 @@
+a{
+	color:#22BCE8;
+}
+body{
+	background:#555; /*DAD8D8*/ 
+	font-size: 16px; /*Es aqui en el body donde siempre se 
+						declara el tamaño de la fuente raiz para toda la
+						pagina*/
+	font-family: Arial;
+}
+header{
+	background:#344B54;
+	color: #fff;
+	padding: 0.5em; /*con este padding hacemos que el header
+					tenga un espacio que le permita no estar
+					pegado ni a la izquierda ni a la parte 
+					superior de la pagina*/
+	overflow: hidden;/*Ahora, al agregarle la propiedad
+						overflow al header el border del
+						mismo se extenderan */
+	position: relative;
+}
+header figure{
+	float: left;
+}
+header h1{
+	font-size: 1.2em;
+	font-weight: normal;
+	margin:0.2em 70px 0 0; /*las etiquetas h1 h2 h3 p tiene por defecto
+				margenes predeterminados para separse entre
+				si, es por eso que al margen de nuestro h1
+				lo dejamos con valor cero para que no tenga
+				nada de espacio para separarse.
+				agrerle un margin derecho de 70px le 
+				dejamos espacio para que el avatar pueda flotar
+				y aun asi cuando la pagina se mueva
+				siempre va tener espacio*/
+}
+header #avatar{
+	margin: 0.5em 1em 0 0 ;
+	position: absolute;
+	right:0;
+	top: 0;
+}
+header #avatar img{
+	border-radius: 50%;	/*siempre el borde va con porcentajes*/
+	width: 55px;
+}
+header #logos img{
+	border-right: 1px solid #fff;
+	padding-right: 0.5em;
+	margin-right: 0.5em;
+	width: 52px;
+}
+nav{
+	background:#80BCA3 ;
+	padding:0 0.5em ;
+
+}
+nav ul{
+	margin:0;
+	padding:0 ;
+	position: relative;
+	list-style:none;
+}
+nav ul li{
+	display: inline-block;
+	margin: 0 1em 0 0;
+}
+nav ul li a{
+	color: #fff;
+	display: block;/*si no se le hubiese agregado la 
+					display a esta etiqueta con valor block
+					no podriamos ponernele margenes
+					a los enlaces,es por eso que le 
+					agregamos display con valor block*/
+	text-decoration: none;
+	margin: 0.5em 0  0.5em 0 ;
+}
+nav ul #publicar_nav{
+	background: #22BCE0;
+	border-radius: 10%;
+	margin: 0 0.5em 0 0;
+	position: absolute;
+	top: -0.2em;
+	right:0;
+}
+nav ul #publicar_nav a{
+	padding: 0.2em 0.5em;
+	font-style: italic;
+}
+
+
