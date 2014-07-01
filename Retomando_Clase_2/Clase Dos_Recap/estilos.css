@@ -2,11 +2,30 @@ a{
 	color:#22BCE8;
 }
 body{
-	background:#555; /*DAD8D8*/ 
+	background:#998989; /*DAD8D8*/ 
 	font-size: 16px; /*Es aqui en el body donde siempre se 
 						declara el tamaño de la fuente raiz para toda la
 						pagina*/
 	font-family: Arial;
+}
+footer{
+	color:rgba(255,255,255,0.7);
+	background: #22BCE0;
+	text-align: center;
+	padding: 1em;
+}
+footer p:last-child:before{
+	content: "- "
+
+}
+footer p:last-child:after{
+	content: " -"
+}
+footer p:first-child{
+	margin-bottom: 0;
+}
+footer p:last-child{
+	margin-top: 0;
 }
 header{
 	background:#344B54;
@@ -96,9 +115,79 @@ nav ul li a{
 
 
 }
-section #content{
+#content {
 	margin: 1em;
 }
+#content .item{
+	background: white;
+	border-bottom: 3px solid #22BCE0;
+	position: relative;	
+	min-height: 128px;/*aqui estaba un overflow que nos permiitia
+						que la imagen no se saliera del contenedor
+						pero ahora la agregamos un min-height
+						para que el contenedor se extendiera lo
+						suficiente para que la imagen cupiera*/
+	margin-bottom: 3em;
+
+}
+#content .item .author_item{
+	color: #aaa;
+}
+#content .item  .datos_item{
+	text-align: right;/*asi hacemos que esta caja se mueva
+						hacia la derecha. Depues movemos 
+						pony y otras cosas*/
+	margin: 1em 1em 0 0;
+}
+
+#content .item  .datos_item .tag_item{
+	background: #F4502A;
+	border-radius: 10px;
+	color:white;
+	display: inline-block;
+	float: left;
+	text-decoration: none;
+	padding: 0.2em 0.5em;
+
+}
+#content .item .datos_item .fecha_item{
+	color: #aaa;
+}
+#content .item .titulo_item {
+	font-style: italic;
+	font-size: 1.2em;
+	padding-top: 1em;
+}
+#content .item .titulo_item a{
+	text-decoration: none;
+	color: #444;
+}
+#content .item .imagen_item{
+	float: left;
+	margin-right: 1em;
+}
+#content .item .imagen_item img{
+	width: 96px;
+}
+#content .item .votacion{
+	background: white;
+	border-radius: 0 0 0.5em 0.5em;
+	padding: 0.2em 0.5em;
+	position: absolute;
+	top:100%;
+	margin-top: 3px;
+	margin-left: 5%;/*el margen ezquierdo es de cinco 
+	logramos que la caja se recorra para que
+	parezca un efecto centrado.*/
+	width: 90%; /*con esto hacemos que
+	esta caja se extienda solo un noveta por ciento
+	de la pagina*/
+}
+#content .item .votacion .comentarios_item{
+	float: right;
+}
+
+
 
 
 
