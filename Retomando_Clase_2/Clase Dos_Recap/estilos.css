@@ -55,13 +55,26 @@ header #logos img{
 nav{
 	background:#80BCA3 ;
 	padding:0 0.5em ;
-
+	position: relative;
 }
 nav ul{
 	margin:0;
 	padding:0 ;
-	position: relative;
 	list-style:none;
+}
+nav ul #publicar_nav{
+	margin: 0 0.5em 0 0;
+	position: absolute;
+	top: -0.3em;
+	right:0;
+}
+nav ul #publicar_nav a{
+	background: #22BCE0;
+	box-shadow:rgba(0,0,0,0.5)  5px 5px 20px;
+	border-radius: 10%;
+	font-style: italic;
+	padding: 0.8em;
+	text-shadow:rgba(0,0,0,0.5) 2px 2px 5px;
 }
 nav ul li{
 	display: inline-block;
@@ -75,19 +88,18 @@ nav ul li a{
 					a los enlaces,es por eso que le 
 					agregamos display con valor block*/
 	text-decoration: none;
-	margin: 0.5em 0  0.5em 0 ;
+	padding: 0.5em 0; /*le agregamos padding y no margin
+						porque al agregarle padding logramos
+						que toda el area de la caja sea "clickiable"
+						si agregaramos solo el margen no tendriamos 
+						efecto.*/
+
+
 }
-nav ul #publicar_nav{
-	background: #22BCE0;
-	border-radius: 10%;
-	margin: 0 0.5em 0 0;
-	position: absolute;
-	top: -0.2em;
-	right:0;
+section #content{
+	margin: 1em;
 }
-nav ul #publicar_nav a{
-	padding: 0.2em 0.5em;
-	font-style: italic;
-}
+
+
 
 
