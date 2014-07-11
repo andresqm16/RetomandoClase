@@ -2,7 +2,7 @@ a{
 	color:#22BCE8;
 }
 body{
-	background:#998989; /*DAD8D8*/ 
+	background:#F5F5F5; /*DAD8D8*/ 
 	font-size: 16px; /*Es aqui en el body donde siempre se 
 						declara el tamaño de la fuente raiz para toda la
 						pagina*/
@@ -45,7 +45,7 @@ header figure{
 header h1{
 	font-size: 1.2em;
 	font-weight: normal;
-	margin:0.2em 70px 0 0; /*las etiquetas h1 h2 h3 p tiene por defecto
+	margin: 0 70px 0 0; /*las etiquetas h1 h2 h3 p tiene por defecto
 				margenes predeterminados para separse entre
 				si, es por eso que al margen de nuestro h1
 				lo dejamos con valor cero para que no tenga
@@ -84,20 +84,20 @@ nav ul{
 nav ul #publicar_nav{
 	margin: 0 0.5em 0 0;
 	position: absolute;
-	top: -0.3em;
+	top: -0.1em;
 	right:0;
 }
 nav ul #publicar_nav a{
 	background: #22BCE0;
 	box-shadow:rgba(0,0,0,0.5)  5px 5px 20px;
-	border-radius: 10%;
+	border-radius: 5px;
 	font-style: italic;
-	padding: 0.8em;
+	padding:0.6em 0.8em;
 	text-shadow:rgba(0,0,0,0.5) 2px 2px 5px;
 }
 nav ul li{
 	display: inline-block;
-	margin: 0 1em 0 0;
+	margin: 0 1.5em 0 0;
 }
 nav ul li a{
 	color: #fff;
@@ -115,79 +115,71 @@ nav ul li a{
 
 
 }
-#content {
+#content{
 	margin: 1em;
 }
+
 #content .item{
-	background: white;
-	border-bottom: 3px solid #22BCE0;
-	position: relative;	
-	min-height: 128px;/*aqui estaba un overflow que nos permiitia
-						que la imagen no se saliera del contenedor
-						pero ahora la agregamos un min-height
-						para que el contenedor se extendiera lo
-						suficiente para que la imagen cupiera*/
+	background: #fff;
+	border-bottom: 3px solid #22BCE8;
+	min-height: 128px; /*con min height le pedimos al naveagador que
+						que la altura sea de por lo menos
+						 x pixeles, hay que utilizar la propiedad min-heigh, no max,
+						 totalmente diferente.*/
 	margin-bottom: 3em;
-
+	position: relative;
 }
-#content .item .author_item{
-	color: #aaa;
-}
-#content .item  .datos_item{
-	text-align: right;/*asi hacemos que esta caja se mueva
-						hacia la derecha. Depues movemos 
-						pony y otras cosas*/
-	margin: 1em 1em 0 0;
-}
-
-#content .item  .datos_item .tag_item{
-	background: #F4502A;
-	border-radius: 10px;
-	color:white;
-	display: inline-block;
+#content .item .imagen_item {
 	float: left;
-	text-decoration: none;
-	padding: 0.2em 0.5em;
-
+	margin-right: 1em;
 }
-#content .item .datos_item .fecha_item{
-	color: #aaa;
+#content .item .imagen_item img{/* es a la etiqueta img a la que
+									tenemos que hacer re-size
+									no a la etiqueta figure*/
+	width: 96px;
 }
-#content .item .titulo_item {
-	font-style: italic;
+#content .item .titulo_item{
 	font-size: 1.2em;
-	padding-top: 1em;
+	font-style:italic;
+	padding:1em 1em 0 0 ;
+	margin-bottom: 0;
 }
 #content .item .titulo_item a{
 	text-decoration: none;
 	color: #444;
 }
-#content .item .imagen_item{
-	float: left;
-	margin-right: 1em;
+#content .item .author_item{
+	color: #aaa;
 }
-#content .item .imagen_item img{
-	width: 96px;
+#content .item .datos_item{
+	color: #aaa;
+	margin: 1em 1em 0 0;
+}
+#content .item .datos_item .tag_item{
+	background: #F4502A;
+	border-radius: 0.5em;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.2em 0.5em;
+}
+#content .item .datos_item .fecha_item{
+	float: right;
 }
 #content .item .votacion{
-	background: white;
-	border-radius: 0 0 0.5em 0.5em;
-	padding: 0.2em 0.5em;
+	background: #fff;
+	border-radius: 0 0 0.5em 0.5em ; 
+	padding: 0.5em 1em;
 	position: absolute;
-	top:100%;
-	margin-top: 3px;
-	margin-left: 5%;/*el margen ezquierdo es de cinco 
-	logramos que la caja se recorra para que
-	parezca un efecto centrado.*/
-	width: 90%; /*con esto hacemos que
-	esta caja se extienda solo un noveta por ciento
-	de la pagina*/
+	margin-top: 0.2em;
+	left: 3%;
+	right: 3%;
+	top: 100%;
 }
+#content .item .votacion .guardar_item,
 #content .item .votacion .comentarios_item{
 	float: right;
 }
-
-
 
 
 
