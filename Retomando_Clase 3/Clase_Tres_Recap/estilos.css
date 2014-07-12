@@ -33,9 +33,19 @@ Utilizando fonts esquirril
 
 .icon-pencil:before {
 	content: "\e600";
+	/*Esta es una manera profesional
+	de pocisionar el icono*/
+	margin-right: 0.5em;
+
 }
 .icon-star:before {
 	content: "\e601";
+	/*Esta es una manera profesional
+	de pocisionar el icono*/
+	position:relative;
+	top: 0.1em;
+	right:0.5em;
+
 }
 .icon-Flecha-Arriba:before {
 	content: "\e602";
@@ -47,6 +57,10 @@ Utilizando fonts esquirril
 a
 {
 	color: #22BCE0;
+}
+aside
+{
+	display:none;
 }
 body
 {
@@ -118,8 +132,6 @@ header #logo img
 nav
 {
 	background: #3075CE;/*background: #80BCA3;*/
-	box-shadow: rgba(0,0,0,0.5) 0px 0px 10px;
-	padding: 0 0.5em;
 	position: relative;
 }
 nav ul
@@ -132,7 +144,7 @@ nav ul #publicar_nav
 {
 	position: absolute;
 	top: -0.1em;
-	right: -1em;
+	right: -.5em;
 }
 nav ul #publicar_nav a
 {
@@ -143,20 +155,47 @@ nav ul #publicar_nav a
 	padding: 0.6em 0.8em;
 	text-decoration: none;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
-	margin-left: 0.5em;
+	-webkit-transition:0.01s;
+	/*Algo de animaciones en los links*/
 }
+
+nav ul #publicar_nav a:hover
+{
+	background: #F4502A;
+}
+/*
+nav ul #publicar_nav a:hover
+{
+	box-shadow:0 0 60px #344b54;
+}
+
+*/
+/*
+nav ul #publicar_nav  .icon-pencil
+{
+	margin-right: 0.5em; 
+}
+Esta es una forma de pocisionar el icono
+pero la manera profesional es 
+en la clase del icono directamente
+*/
 nav ul li
 {
 	display: inline-block;
-	margin: 0 2em 0 0;
+	margin: 0 1em 0 0;
 }
 nav ul li a
 {
 	color: white;
 	display: block;
-	padding: 0.5em 0;
+	padding: 0.5em ;
 	text-decoration: none;
+	-webkit-transition:0.3s;
 
+}
+nav ul li a:hover
+{
+	background: #344b54;
 }
 #contenido
 {
@@ -230,11 +269,182 @@ nav ul li a
 {
 	text-decoration: none;
 }
+/*Aqui comenzamos a ser mas espeficos en
+los estilos que queremos que lleve nuestros
+iconos,primero empezando por el icono de la
+estrella y luego por ultimo las flechas*/
+#contenido .item .votacion .guardar_item/* tal parece que no importan cual
+											de los nombres que estan dentro clase utilizemos
+											los dos nombres que son,".guardar_item" y ".icon-star" */
+{
+	color: #FFEB00;
+	/*
+	margin-right: 0.5em;
+	padding-top: 0.1em;
+	Notese que esta es una forma mas 
+	de pocisionar nuestro icono de la clase
+	guardar item mas sin embargo existe una
+	mejor y esa es darle lo propiedad
+	relative a el icono mas no a la clase
+	para tener asi un mejor posicionamiento
+	con los valores que da la propiedad
+	relative que son top,left,rihght y bottom.
+	todo eso va en el elemento before, que es
+	el icono. lo mismo hacemos para el icon pincel.
+	*/
+
+}
+#contenido .item .votacion .up
+{
+	color: green;
+}
+#contenido .item .votacion .down
+{
+	color: red;
+}
 #contenido .item .votacion .comentarios_item, 
 #contenido .item .votacion .guardar_item
 {
 	float: right;
 }
 
+/*Con java script lograremos que nuestro
+viewport se transfore , cambie, lo haremos
+responsive desing para que cambie, de acuerdo
+a la resoluciones de cada pantalla.
+Con los mediaqueries manipulamos nuestra hoja
+de estilo, le decimos a la pagina cuando esto
+,o pase esto, o le dimos click a esto, pase esto,
+eso y aquello, los mediaqueries,como buena practica
+se colocan debajo de los estilos. Ahora los media
+queries comienzan con el signo "@media" */
 
 
+@media screen and (min-width:800px){
+
+
+	#contenido {
+	overflow:hidden;
+	}
+
+	#contenido .item{
+	width:49%;
+	float:left;
+	}
+
+	#contenido .item:nth-child(odd)
+	/* la declaracion que le sigue al
+	id contenido y a la clase .item
+	es un psudo elemento, en este caso
+	con la declaron nth-child() le
+	pedimos a nuestra hoja de estilo
+	que los "hijos" con numero
+	impar,, "odd," tenga esta propiedad 
+	un margen de 2 por ciento.
+	*/
+	{
+	margin-right:2%;
+	}
+}
+@media screen and (min-width:1000px){
+
+	aside{
+	display:block;
+	float:right;
+	margin:1em;
+	width:25%;
+	}
+	aside video{
+		width:100%;
+	}
+
+
+}
+/*despues le endicamos a nuestro 
+media a quien queremos que
+afecte en este caso a nuestra
+pantalla so colocamos la palabra
+"screen." luego de la
+declaracion "@media" Despues le 
+colocamos la condicion, es decir, 
+lo que tiene que suceder para que la 
+pantalla haga esto o aquello; 
+la condicion se declara
+dentro de este formato "and ()".
+ la condicion dentro del formato anterior
+y  se declara asi 
+" (min-width:800px)"
+ y dice ,o condiciona,cuando el 
+ancho  de la pantalla sea de
+minimo 800px quiero que
+a la pantalla le hagas esto, y a conti-
+nuacion declaramos,dentro de
+ los corchetes "{}" lo que queremos
+que pase cuando se cumpla la condicion;
+dentro del corchete mismo declaramos
+que la propiedad background de la etiqueta
+body pase a un color rojo, eso lo declaramos de 
+la misma manera que declaramos cualquier
+otro estilo en nuestro archivo css
+body{
+	background:red;
+}
+
+Asi dentro de nuestro "media"
+podemos declarar que sucedan mas cosas
+siempre y cuando se cumpla la condicion
+(min-width:800px)
+una de esas "cosas" que queremos que pasen
+son que cuando el margen sea de minimo
+800px todos los elementos de la clase
+item cubran el 50%  de la pagina
+tambien queremos que cuando la
+condicion se cumpla se formen dos columnas
+y que las dos columnas tengan
+un margen entre
+si, eso se lo logra agregando mas
+declaraciones a nuestra hoja de estilo
+si la condicion se cumpla.
+
+#contenido {
+	overflow:hidden;
+}
+#contenido .item{
+	width:49%;
+	float:left;
+
+}
+
+#contenido .item: nth-child(odd){
+	margin-right:2%;
+}
+
+ya al final le quitamos este estilo
+a la etiqueta body para que la pagina se
+vea normal
+
+	body{
+		background:red;
+	}
+
+si le queremos aplicar mas,o nuevas
+condiciones a nuestra hoja de 
+estilo declaramos otros medias
+siguiendo el mismo formato,por ejemplo
+ahora le decimos al media
+si el ancho de la pantalla tiene un minimo
+de 1000px has que se aparezca 
+un video que esta escondido cuando la pagina
+no tiene tal ancho, sino menos
+
+@media screen and (min-width:1000px){
+
+	aside{
+	display:block;
+	}
+
+}
+*/
+
+/*Animaciones*/
+/**/
